@@ -247,7 +247,7 @@ class SecretSantaGUI extends JFrame implements ActionListener{
 			btnEmail.setEnabled(true);
 		}
 		else if(action.getSource() == btnEmail){
-			EMailer em = new EMailer("camieac@gmail.com","camieac@gmail.com","aqwesmcsyopqrvwe", "smtp.gmail.com");
+			EMailer em = new EMailer("email@email.com","email@mail.com","password", "smtp server");
 			String email;
 			String n = "null";
 			for(Person p : s.getPeople()){
@@ -259,7 +259,7 @@ class SecretSantaGUI extends JFrame implements ActionListener{
 					e.printStackTrace();
 				}
 				if(email != null && !email.isEmpty()){
-					em.sendEmail(p.getEmail(), "FLACID Secret Santa", "You have a set budget of £10", p.getName(), n, "GROUP");
+					em.sendEmail(p.getEmail(), "Secret Santa", "You have a set budget of £10", p.getName(), n, "GROUP");
 				}
 			}
 			btnEmail.setEnabled(false);
